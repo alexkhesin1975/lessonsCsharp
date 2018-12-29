@@ -15,6 +15,7 @@ namespace ConsoleApp1
             Console.WriteLine();
             Console.WriteLine("that is my second self writed program");
             Console.WriteLine("whaoo!!!");
+            
             Console.WriteLine("please insert some text");
             input1 = Console.ReadLine();
             Console.WriteLine("and another one please");
@@ -28,6 +29,8 @@ namespace ConsoleApp1
             Console.WriteLine(input2 + "|" + input3);
             Console.WriteLine(input1 + "|" + input3);
             Console.WriteLine(input1 + "|" + input2 + "|" + input3);
+
+            
         }
     }
 }
