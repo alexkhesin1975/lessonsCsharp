@@ -13,7 +13,8 @@ namespace Lesson1
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ForegroundColor = ConsoleColor.White;
 
-
+            
+            
             Console.WriteLine();
             Console.WriteLine("Hello world");
             Console.WriteLine("that is my first self writed program");
@@ -22,8 +23,16 @@ namespace Lesson1
 
             Console.ResetColor();
 
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("please write foreground colour");
+            string foregroundtemp = Console.ReadLine();
+            ConsoleColor foreground = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), foregroundtemp, true);
+            Console.WriteLine("please write background colour");
+            string backgroundtemp = Console.ReadLine();
+
+            ConsoleColor background = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), backgroundtemp, true);
+
+            Console.BackgroundColor = background;
+            Console.ForegroundColor = foreground;
 
 
             Console.WriteLine();
@@ -32,6 +41,11 @@ namespace Lesson1
             Console.WriteLine("whaoo!!!");
             Console.WriteLine();
             Console.ResetColor();
+
+            char x = 'a';
+            Console.WriteLine((int)'a');
+            Console.WriteLine((int)x);
+            Console.WriteLine(x);
         }
     }
 }
