@@ -15,6 +15,7 @@ namespace lesson1._4
             Console.WriteLine("Wahoo!!");
             Console.WriteLine();
             Console.WriteLine("please describe a count of numbers you'll be using");
+            
 
              int count;
              count = 0;
@@ -51,10 +52,12 @@ namespace lesson1._4
             string value3 = "Perls";
 
             
-            Console.WriteLine("{0}, {1}, {2}",
+            Console.WriteLine("{2}, {1}, {0}",
                 value1,
                 value3,
                 value2);
+
+            Console.WriteLine(value1 + ", " + value3 +", " + value2 );
 
             char[] array = new char[] { 'a', 'b', 'c', 'd' };
             Console.WriteLine(array);
