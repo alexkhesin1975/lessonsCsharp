@@ -11,7 +11,10 @@ namespace lesson2._1
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter exersise");
-            string exersise = Console.ReadLine();
+            double i = double.Parse(Console.ReadLine());
+            Console.WriteLine(i);
+            /*
+             string exersise = Console.ReadLine();
 
             int index = 0;
             double[] num = new double[exersise.Length];
@@ -45,13 +48,13 @@ namespace lesson2._1
             string[] sign1 = new string[r-1];
             for (int count = 0; count <= r; count++)
             {
-                /*i = 0;
+                i = 0;
                 result = (num1[i] + sign1[i]);
-                i++;*/
-                Console.Write(num[i]+sign[i]);
                 i++;
+                Console.Write(num[i]+sign[i]);
+                i++; 
             }
-            
+            */
         }
     }
 }
