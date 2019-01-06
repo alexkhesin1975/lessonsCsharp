@@ -10,7 +10,7 @@ namespace Lesson3
     {
         static Random r = new Random();
 
-        // 1. no return, no parameters
+        // 1. no return, no parameters (can be mix of types) 
         static void f1()
         {
             Console.WriteLine();
@@ -19,7 +19,7 @@ namespace Lesson3
             Console.WriteLine("Hello again again to f1");
         }
 
-        // 2. return value, no params
+        // 2. return value, no params (must be of one specific type int or double or string )
         static int addRandomNumber()
         {          
             int n1 = r.Next(100);
@@ -34,7 +34,7 @@ namespace Lesson3
             }            
         }
 
-        // 3. no return , yes params
+        // 3. no return , yes params (can be mix of types)
         static void f3(int p1, string s)
         {
             Console.WriteLine("The number is: " + p1);
@@ -47,7 +47,7 @@ namespace Lesson3
             Console.WriteLine("result is : " + (num1+num2));
         }
 
-        // 4. return value, yes params
+        // 4. return value, yes params (must be of one specific type int or double or string )
         static int add(int n1, int n2)
         {
             return n1 + n2;
