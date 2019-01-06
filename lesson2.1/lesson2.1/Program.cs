@@ -11,10 +11,73 @@ namespace lesson2._1
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter exersise");
-            double i = double.Parse(Console.ReadLine());
-            Console.WriteLine(i);
-            /*
-             string exersise = Console.ReadLine();
+            /*     double i = double.Parse(Console.ReadLine());
+                 i = 2 + 5;
+                 Console.WriteLine(i);
+                 double x = double.Parse("2+5*9=");
+
+                         */
+            string exersise = Console.ReadLine();
+            string num1;
+            string num2;
+            double dNum1, dNum2;
+
+            char sign;
+            int index = 0;
+            double result = 0;
+            char currChar = exersise[index];
+
+            num1 = "";
+            while (currChar >= '0' && currChar <= '9')
+            {
+                num1 += currChar;
+
+                index++;
+                currChar = exersise[index];
+            }
+            result = double.Parse(num1);
+
+            while (currChar != '=')
+            {
+ 
+                sign = currChar;
+                index++;
+                currChar = exersise[index];
+
+                num2 = "";
+                while (currChar >= '0' && currChar <= '9')
+                {
+                    num2 += currChar;
+
+                    index++;
+                    currChar = exersise[index];
+                }
+
+                dNum1 = result;
+                dNum2 = double.Parse(num2);
+
+                if (sign == '*')
+                {
+                    result = dNum1 * dNum2;
+                }
+                else if (sign == '/')
+                {
+                    result = dNum1 / dNum2;
+                }
+                else if (sign == '+')
+                {
+                    result = dNum1 + dNum2;
+                }
+                else
+                {
+                    result = dNum1 - dNum2;
+                }
+                
+            }
+
+            Console.WriteLine(exersise + result);
+        }
+/*
 
             int index = 0;
             double[] num = new double[exersise.Length];
@@ -54,7 +117,8 @@ namespace lesson2._1
                 Console.Write(num[i]+sign[i]);
                 i++; 
             }
-            */
+            
         }
+        */
     }
 }

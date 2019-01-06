@@ -23,11 +23,12 @@ namespace lesson2._5
                 for (int i = 0; i < array.Length; i++)
                 {
                     array[i] = r.Next(1, 101);
+                
                     if ((i > 0) && (array[i] < array[i - 1]))
                     {
                         int x = i;
                         //somthing wrong here. if i use x>1 then first not sorted if use x>0 it fails
-                        while ((array[x] < array[x - 1]) && (x > 1)) 
+                        while ((x > 0) && (array[x] < array[x - 1])  ) 
                         {
                             int temp = array[x];
                             array[x] = array[x - 1];
