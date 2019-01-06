@@ -20,40 +20,32 @@ namespace lesson2._5
             }
             else
             {
-                for (int i = 0; i < array.Length - 1; i++)
+                for (int i = 0; i < array.Length; i++)
                 {
                     array[i] = r.Next(1, 101);
-                    if (i > 0 && array[i] < array[i - 1])
+                    if ((i > 0) && (array[i] < array[i - 1]))
                     {
-                        int x = i - 1;
-                        int temp = array[i];
-                        //hren!!!
-                        while (x > 0)
+                        int x = i;
+                        //somthing wrong here. if i use x>1 then first not sorted if use x>0 it fails
+                        while ((array[x] < array[x - 1]) && (x > 1)) 
                         {
+                            int temp = array[x];
                             array[x] = array[x - 1];
                             array[x - 1] = temp;
                             x--;
-                            if ( temp <= array[x])
-                            {
-                              array[x] = array[x - 1];
-                                array[x - 1] = temp;
-                            }
-                            else
-                            {
-                                array[x] = temp;
-                            }
-                           
                         }
-                            
-                        
                     }
                     
-                    
-                    Console.WriteLine(array[i]);
-                    
                 }
+                //prints sorted array
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.WriteLine("location in array " + i + ": " + array[i]);
+                }
+                //looking for entered number in the array
+                int test = 0;
                 Console.WriteLine("please insert number for check");
-                int test = int.Parse(Console.ReadLine());
+                test = int.Parse(Console.ReadLine());
                 bool yes = false;
                 for (int i = 0; i <= array.Length - 1; i++)
                 {
