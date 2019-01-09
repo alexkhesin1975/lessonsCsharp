@@ -80,9 +80,11 @@ namespace lesson4._1
             double result = 0;
             a = strToArray(s, out size);
             int i;
-            for (i = 0; i < a.GetLength(0); i++) 
+            string x;
+            
+            for (i = 0; i < size; i++) 
             {
-                string x = result.ToString();
+                x = result.ToString();
                 if (a[0 , i] == "+" && a[1 , i] == "0")
                 {
                     if (i > 0 && a[1, i - 1] == "9")
