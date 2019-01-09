@@ -89,11 +89,11 @@ namespace lesson4._1
                     {
                         result = addition(x, a[0, i + 1]);
                     }
-                    else
-                    {
+                    //else
+                    //{
                         result = addition(a[0, i - 1], a[0, i + 1]);
                         a[1, i] = "9";
-                    }
+                    //}
                 }
                 else if (a[0, i] == "-" && a[1, i] == "0")
                 {
@@ -131,13 +131,18 @@ namespace lesson4._1
                         a[1, i] = "9";
                     }
                 }
-                a[1, i - 1] = "9";
+                
                 if (i + 1 < a.GetLength(0))
                 {
                     a[1, i + 1] = "9";
                 }
+                else if ( i - 1 >= 0)
+                    {
+                    a[1, i - 1] = "9";
+                    }
+                Console.WriteLine("result is = " + result);
             }
-            Console.WriteLine("result is = " + result);
+            
             Main(null);
         }
     }
