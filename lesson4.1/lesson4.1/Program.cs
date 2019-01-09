@@ -78,9 +78,9 @@ namespace lesson4._1
             string[,] a;
             int size;
             double result = 0;
-            a = strToArray(s, out size); 
-
-            for (int i = 0; i < a.GetLength(0); i++) 
+            a = strToArray(s, out size);
+            int i;
+            for (i = 0; i < a.GetLength(0); i++) 
             {
                 string x = result.ToString();
                 if (a[0 , i] == "+" && a[1 , i] == "0")
@@ -89,11 +89,13 @@ namespace lesson4._1
                     {
                         result = addition(x, a[0, i + 1]);
                     }
-                    //else
-                    //{
+                    else 
+                    {
                         result = addition(a[0, i - 1], a[0, i + 1]);
                         a[1, i] = "9";
-                    //}
+                        a[1, i - 1] = "9";
+                        a[1, i + 1] = "9";
+                    }
                 }
                 else if (a[0, i] == "-" && a[1, i] == "0")
                 {
@@ -105,6 +107,8 @@ namespace lesson4._1
                     {
                         result = subtraction(a[0, i - 1], a[0, i + 1]);
                         a[1, i] = "9";
+                        a[1, i - 1] = "9";
+                        a[1, i + 1] = "9";
                     }
                 }
                 else if (a[0, i] == "*" && a[1, i] == "0")
@@ -117,6 +121,8 @@ namespace lesson4._1
                     {
                         result = multiplication(a[0, i - 1], a[0, i + 1]);
                         a[1, i] = "9";
+                        a[1, i - 1] = "9";
+                        a[1, i + 1] = "9";
                     }
                 }
                 else if (a[0, i] == "/" && a[1, i] == "0")
@@ -129,20 +135,12 @@ namespace lesson4._1
                     {
                         result = division(a[0, i - 1], a[0, i + 1]);
                         a[1, i] = "9";
+                        a[1, i - 1] = "9";
+                        a[1, i + 1] = "9";
                     }
                 }
-                
-                if (i + 1 < a.GetLength(0))
-                {
-                    a[1, i + 1] = "9";
-                }
-                else if ( i - 1 >= 0)
-                    {
-                    a[1, i - 1] = "9";
-                    }
-                Console.WriteLine("result is = " + result);
             }
-            
+            Console.WriteLine("result is = " + result);
             Main(null);
         }
     }
