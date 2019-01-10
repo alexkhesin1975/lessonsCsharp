@@ -71,6 +71,13 @@ namespace lesson4._1
             return result;
         }
         
+        static void changeNine(string[,] mat, int i)
+        {
+            mat[1, i] = "9";
+            mat[1, i - 1] = "9";
+            mat[1, i + 1] = "9";
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter exercise");
@@ -94,9 +101,10 @@ namespace lesson4._1
                     else 
                     {
                         result = addition(a[0, i - 1], a[0, i + 1]);
-                        a[1, i] = "9";
-                        a[1, i - 1] = "9";
-                        a[1, i + 1] = "9";
+                        changeNine(a, i);
+                        //a[1, i] = "9";
+                        //a[1, i - 1] = "9";
+                        //a[1, i + 1] = "9";
                     }
                 }
                 else if (a[0, i] == "-" && a[1, i] == "0")
