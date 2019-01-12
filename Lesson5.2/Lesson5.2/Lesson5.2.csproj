@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{788553AF-04D3-4B56-B885-4117314ECFA4}</ProjectGuid>
+    <ProjectGuid>{42A68EB8-8A94-450F-9276-25065DC03BE8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_5._2</RootNamespace>
-    <AssemblyName>5.2</AssemblyName>
+    <RootNamespace>Lesson5._2</RootNamespace>
+    <AssemblyName>Lesson5.2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ping.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
