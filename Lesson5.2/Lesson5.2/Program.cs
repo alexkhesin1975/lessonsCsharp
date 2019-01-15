@@ -25,14 +25,69 @@ namespace Lesson5._2
             reader = p.StandardOutput;
             string result = reader.ReadToEnd();
             Console.WriteLine(result);
+            System.IO.File.WriteAllText(@"D:\Users\sasha\Documents\GitHub\home\lessonsCsharp\Lesson5.2\Lesson5.2\ping.txt", result);
             p.WaitForExit();
-            
-            
+        }
+        static void parseFile()
+        {
+            string[] pf = File.ReadAllLines(@"D:\Users\sasha\Documents\GitHub\home\lessonsCsharp\Lesson5.2\Lesson5.2\ping.txt");
+
+            foreach (string a in pf)
+            {
+                string[] words = a.Split(' ');
+                foreach (var word in words)
+                {
+
+
+                    if (word.Contains("TTL<"))
+                    {
+                        Console.WriteLine("Super Greate Ping Speed " + word);
+                    }
+                    else if (word.Contains("TTL="))
+                    {
+                        string TTL = "";
+                        foreach (char c in word)
+                        {
+                            if (c >= '0' && c <= '9')
+                            {
+                                TTL += c;
+                            }
+                        }
+                        int i = int.Parse(TTL);
+                        if ( i <= 10 )
+                        {
+                            Console.WriteLine("Greate Ping Speed " + word);
+                        }
+                        else if (i >= 10 && i <= 60)
+                        {
+                            Console.WriteLine("Also Good Ping Speed " + word);
+                        }
+                        else if ( i > 60)
+                        {
+                            Console.WriteLine("Average Ping Speed " + word);
+                        }
+                    }
+                }
+                
+                Console.WriteLine();
+            }
+
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Plese insert ping parameters");
-            P(Console.ReadLine());
+            Console.WriteLine("Please choose task");
+            Console.WriteLine("Task 1. is ping ");
+            Console.WriteLine("Task 2. is checking pin results");
+            int i = int.Parse(Console.ReadLine());
+            if (i == 1)
+            {
+                parseFile();
+            }
+            else if (i == 2)
+            {
+                Console.WriteLine("Plese insert ping parameters");
+                P(Console.ReadLine());
+            }
         }
     }
 }

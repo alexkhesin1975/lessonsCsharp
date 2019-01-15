@@ -1,1 +1,27 @@
-﻿
+
+Pinging www.google.com [172.217.16.132] with 32 bytes of data:
+Reply from 172.217.16.132: bytes=32 time=65ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=67ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=71ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=73ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=67ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=68ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=68ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=65ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=71ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=65ms TTL=5
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL=54
+Reply from 172.217.16.132: bytes=32 time=66ms TTL<1
+
+Ping statistics for 172.217.16.132:
+    Packets: Sent = 20, Received = 20, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 65ms, Maximum = 73ms, Average = 67ms

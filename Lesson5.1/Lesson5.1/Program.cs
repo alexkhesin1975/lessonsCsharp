@@ -20,7 +20,7 @@ namespace Lesson5._1
                 {
                     foreach (char num2 in curLine)
                     {
-                    
+
                         if (num2 == x)
                         {
                             Console.ForegroundColor = System.ConsoleColor.Red;
@@ -31,12 +31,14 @@ namespace Lesson5._1
                             Console.ForegroundColor = System.ConsoleColor.White;
                             Console.Write(num2);
                         }
-                        
+
                     }
                     Console.WriteLine();
                 }
-                
-                Console.WriteLine(curLine);
+                else
+                {
+                    Console.WriteLine(curLine);
+                }
             }
             
         }
